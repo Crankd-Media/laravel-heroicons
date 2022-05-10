@@ -6,7 +6,7 @@ php artisan vendor:publish --tag=heroicons-config
 
 ## Example
 
-<x-heroicon::icon type="type" icon="check" class="w-6 h-6" />
+<x-heroicon::icon type="outline" icon="check" class="w-6 h-6" />
 
 ## Setup Helper
 
