@@ -1,0 +1,26 @@
+{
+    "name": "crankd/laravel-heroicons",
+    "description": "This will create a basic crud example",
+    "license": "MIT",
+    "version": "1.0.0",
+    "authors": [
+        {
+            "name": "Nathaniel",
+            "email": "admin@crankd.nz"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Crankd\\LaravelHeroIcons\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Crankd\\LaravelHeroIcons\\LaravelHeroIconsServiceProvider"
+            ]
+        }
+    }
+}
