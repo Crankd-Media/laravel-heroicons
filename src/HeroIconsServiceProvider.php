@@ -8,7 +8,7 @@ use Illuminate\Support\ServiceProvider;
 class HeroIconsServiceProvider extends ServiceProvider
 {
 
-    private const CONFIG_FILE = __DIR__ . '/../config/library.php';
+    private const CONFIG_FILE = __DIR__ . '/../config/heroicons.php';
 
     private const PATH_VIEWS = __DIR__ . '/../resources/views';
 
@@ -24,8 +24,8 @@ class HeroIconsServiceProvider extends ServiceProvider
 
         if (function_exists('config_path')) {
             $this->publishes([
-                self::CONFIG_FILE => config_path('library.php'),
-            ], 'config');
+                self::CONFIG_FILE => config_path('heroicons.php'),
+            ], 'heroicons-config');
         }
 
         $this->loadViewsFrom(self::PATH_VIEWS, 'heroicons');
@@ -44,7 +44,7 @@ class HeroIconsServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->mergeConfigFrom(self::CONFIG_FILE, 'library');
+        $this->mergeConfigFrom(self::CONFIG_FILE, 'heroicons');
     }
 
     /**
@@ -56,7 +56,7 @@ class HeroIconsServiceProvider extends ServiceProvider
     {
         Blade::componentNamespace('Crankd\\LaravelHeroIcons\\View\\Components', 'heroicon-helper');
 
-        Blade::componentNamespace('Crankd\\LaravelHeroIcons\\View\\Components\\HeroIcon', config('library.prefix.heroicon'));
+        Blade::componentNamespace('Crankd\\LaravelHeroIcons\\View\\Components\\HeroIcon', config('heroicons.prefix.heroicon'));
         return $this;
     }
 

@@ -1,4 +1,4 @@
-@if(config('library.enable_heroiconhelper'))
+@if(config('heroicons.enable_heroiconhelper'))
 <div class="fixed bottom-0 right-0 z-10 bg-white rounded"
      x-data="helper('{{ $icons  }}')">
 
