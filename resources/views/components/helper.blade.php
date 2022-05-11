@@ -21,7 +21,7 @@ break;
 
 @endphp
 
-<div class="fixed bottom-0 right-0 z-50 bg-white rounded"
+<div class="fixed {{ $position  }} z-50 bg-white rounded"
      x-data="helper('{{ $icons  }}')">
 
     <div class="p-4 ">
