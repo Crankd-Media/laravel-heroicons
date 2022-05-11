@@ -5,7 +5,7 @@ namespace Crankd\LaravelHeroIcons;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
 
-class HeroIconsServiceProvider extends ServiceProvider
+class LaravelHeroIconsServiceProvider extends ServiceProvider
 {
 
     private const CONFIG_FILE = __DIR__ . '/../config/heroicons.php';
