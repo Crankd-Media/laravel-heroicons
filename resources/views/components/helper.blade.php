@@ -57,7 +57,7 @@ break;
                  x-show="search != '' ">
                 <div class="flex justify-center gap-4">
                     <div>
-                        <h3 class="mb-1 text-xs">Outline</h3>
+                        <h3 class="mb-1 text-xs font-bold">Outline</h3>
                         <div class="grid grid-cols-2 gap-2">
                             <template x-for="(icon, index) in filteredIcons">
                                 <div class="text-xs bg-white p-2 border border-gray-200 w-full"
@@ -68,7 +68,7 @@ break;
                         </div>
                     </div>
                     <div>
-                        <h3 class="mb-1 text-xs">Solid</h3>
+                        <h3 class="mb-1 text-xs font-bold">Solid</h3>
                         <div class="grid grid-cols-2 gap-2">
                             <template x-for="(icon, index) in filteredIcons">
                                 <div class="text-xs bg-white p-2 border border-gray-200 w-full"
