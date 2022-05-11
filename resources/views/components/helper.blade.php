@@ -1,5 +1,21 @@
 @if(config('heroicons.enable_heroiconhelper'))
-<div class="fixed bottom-0 right-0 z-10 bg-white rounded"
+
+
+@php
+$helper_position = config('heroicons.helper_position');
+
+switch ($helper_position) {
+case 'bottom-left':
+$position = "bottom-0 left-0";
+break;
+case 'bottom-right':
+$position = "bottom-0 right-0";
+break;
+}
+
+@endphp
+
+<div class="fixed bottom-0 right-0 z-50 bg-white rounded"
      x-data="helper('{{ $icons  }}')">
 
     <div class="p-4 ">
