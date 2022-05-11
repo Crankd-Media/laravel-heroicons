@@ -53,7 +53,7 @@ break;
                    placeholder="Search"
                    class="text-sm px-4 py-2 rounded border border-gray-200 w-full mb-2">
 
-            <div class="results h-96 w-96 overflow-scroll"
+            <div class="results h-96 w-96 overflow-scroll p-1 border bg-white"
                  x-show="search != '' ">
                 <div class="flex justify-center gap-4">
                     <div>
