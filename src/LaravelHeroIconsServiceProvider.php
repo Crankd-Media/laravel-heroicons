@@ -33,7 +33,7 @@ class LaravelHeroIconsServiceProvider extends ServiceProvider
 
         $this->publishes([
             self::PATH_ASSETS => public_path('crankd/laravel-heroicons'),
-        ]);
+        ], 'heroicons-helper');
 
     }
 

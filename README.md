@@ -14,6 +14,8 @@ php artisan vendor:publish --tag=heroicons-config
 
 ## Setup Helper
 
+php artisan vendor:publish --tag=heroicons-helper
+
 <x-heroicon-helper::helper />
 
 <script src="{{ asset('crankd/laravel-heroicons/helper.js') }}"></script>
