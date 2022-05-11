@@ -5,6 +5,12 @@
 $helper_position = config('heroicons.helper_position');
 
 switch ($helper_position) {
+case 'top-left':
+$position = "top-0 left-0";
+break;
+case 'top-right':
+$position = "top-0 right-0";
+break;
 case 'bottom-left':
 $position = "bottom-0 left-0";
 break;

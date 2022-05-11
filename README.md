@@ -18,6 +18,8 @@ php artisan vendor:publish --tag=heroicons-helper
 
 ##### Helper Position
 
+top-left
+top-right
 bottom-left
 bottom-right
 
