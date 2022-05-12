@@ -23,9 +23,5 @@ document.addEventListener("alpine:init", () => {
             });
             this.open = false;
         },
-        init() {
-            console.log("Helper");
-            console.log(this.icons);
-        },
     }));
 });
