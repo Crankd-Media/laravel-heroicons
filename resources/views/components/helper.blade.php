@@ -42,48 +42,50 @@ break;
             </span>
         </div>
 
-        <div x-show="open"
-             class="mt-2">
+        <template x-if="open">
+            <div x-show="open"
+                 class="mt-2">
 
-            <input x-ref="searchField"
-                   x-model="search"
-                   type="text"
-                   name="search"
-                   id=""
-                   placeholder="Search"
-                   class="text-sm px-4 py-2 rounded border border-gray-200 w-full mb-2">
+                <input x-ref="searchField"
+                       x-model="search"
+                       type="text"
+                       name="search"
+                       id=""
+                       placeholder="Search"
+                       class="text-sm px-4 py-2 rounded border border-gray-200 w-full mb-2">
 
-            <div class="results h-96 w-96 overflow-scroll p-2 border bg-white"
-                 x-show="search != '' ">
-                <div class="flex justify-center gap-4">
-                    <div>
-                        <h3 class="mb-1 text-xs font-bold">Outline</h3>
-                        <div class="grid grid-cols-2 gap-2">
-                            <template x-for="(icon, index) in filteredIcons">
-                                <div class="text-xs bg-white p-2 border border-gray-200 w-full"
-                                     @click="copyIcon(icon,'outline')">
-                                    <span x-text="icon"></span>
-                                </div>
-                            </template>
+                <div class="results h-96 w-96 overflow-scroll p-2 border bg-white"
+                     x-show="search != '' ">
+                    <div class="flex justify-center gap-4">
+                        <div>
+                            <h3 class="mb-1 text-xs font-bold">Outline</h3>
+                            <div class="grid grid-cols-2 gap-2">
+                                <template x-for="(icon, index) in filteredIcons">
+                                    <div class="text-xs bg-white p-2 border border-gray-200 w-full"
+                                         @click="copyIcon(icon,'outline')">
+                                        <span x-text="icon"></span>
+                                    </div>
+                                </template>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="mb-1 text-xs font-bold">Solid</h3>
+                            <div class="grid grid-cols-2 gap-2">
+                                <template x-for="(icon, index) in filteredIcons">
+                                    <div class="text-xs bg-white p-2 border border-gray-200 w-full"
+                                         @click="copyIcon(icon, 'solid')">
+                                        <span x-text="icon">
+                                        </span>
+                                    </div>
+                                </template>
+                            </div>
+
                         </div>
                     </div>
-                    <div>
-                        <h3 class="mb-1 text-xs font-bold">Solid</h3>
-                        <div class="grid grid-cols-2 gap-2">
-                            <template x-for="(icon, index) in filteredIcons">
-                                <div class="text-xs bg-white p-2 border border-gray-200 w-full"
-                                     @click="copyIcon(icon, 'solid')">
-                                    <span x-text="icon">
-                                    </span>
-                                </div>
-                            </template>
-                        </div>
 
-                    </div>
                 </div>
-
             </div>
-        </div>
+        </template>
     </div>
 
 </div>
