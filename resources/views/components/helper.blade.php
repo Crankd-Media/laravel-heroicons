@@ -2,9 +2,7 @@
 
 
 @php
-$helper_position = config('heroicons.helper_position');
-
-switch ($helper_position) {
+switch ($position) {
 case 'top-left':
 $position = "top-0 left-0";
 break;
@@ -14,11 +12,10 @@ break;
 case 'bottom-left':
 $position = "bottom-0 left-0";
 break;
-case 'bottom-right':
+default:
 $position = "bottom-0 right-0";
 break;
 }
-
 @endphp
 
 <div class="fixed {{ $position  }} z-50 bg-white rounded"
