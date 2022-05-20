@@ -8,6 +8,8 @@ class Helper extends Component
 {
 
     public $icons;
+
+    public $position;
     /**
      * Create a new component instance.
      *
@@ -16,6 +18,7 @@ class Helper extends Component
     public function __construct()
     {
         $this->icons = $this->getIcons();
+        $this->position = '';
     }
 
     /**
