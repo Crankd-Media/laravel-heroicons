@@ -9,16 +9,21 @@ class Helper extends Component
 
     public $icons;
 
+    /**
+     * The helper position.
+     *
+     * @var string
+     */
     public $position;
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($position)
     {
         $this->icons = $this->getIcons();
-        $this->position = '';
+        $this->position = $position;
     }
 
     /**
