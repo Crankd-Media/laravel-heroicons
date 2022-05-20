@@ -1,6 +1,3 @@
-@if(config('heroicons.enable_heroiconhelper'))
-
-
 @php
 switch ($position) {
 case 'top-left':
@@ -86,6 +83,3 @@ break;
     </div>
 
 </div>
-
-
-@endif

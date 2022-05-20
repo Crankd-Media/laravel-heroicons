@@ -23,6 +23,6 @@ top-right
 bottom-left
 bottom-right
 
-<x-heroicon-helper::helper />
+<x-heroicon-helper::helper position="bottom-right" />
 
 <script src="{{ asset('crankd/laravel-heroicons/helper.js') }}"></script>
