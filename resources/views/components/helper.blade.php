@@ -18,10 +18,10 @@ break;
 <div class="fixed {{ $position  }} z-50 bg-white rounded"
      x-data="helper('{{ $icons  }}')">
 
-    <div class="p-4 ">
+    <div class="p-2">
         <div class="flex items-center space-x-2 "
              @click="open =! open">
-            <svg class="w-6 h-6"
+            <svg class="w-4 h-4"
                  viewBox="0 0 145 142"
                  fill="none"
                  xmlns="http://www.w3.org/2000/svg">
