@@ -15,8 +15,6 @@ break;
 }
 @endphp
 
-{{ $icons }}
-
 <div class="fixed {{ $position  }} z-50 bg-white rounded"
      x-data="helper('{{ $icons  }}')">
 
