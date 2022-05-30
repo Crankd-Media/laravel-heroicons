@@ -34,8 +34,8 @@ class LaravelHeroIconsServiceProvider extends ServiceProvider
         $this->registerComponents();
 
         $this->publishes([
-            self::PATH_ASSETS => public_path('crankd/laravel-heroicons'),
-            self::SVG_ASSETS => public_path('crankd/laravel-heroicons'),
+            self::PATH_ASSETS => public_path('crankd/laravel-heroicons/js'),
+            self::SVG_ASSETS => public_path('crankd/laravel-heroicons/svg'),
         ], 'heroicons-helper');
 
     }
