@@ -50,8 +50,7 @@ break;
                        placeholder="Search"
                        class="text-sm px-4 py-2 rounded border border-gray-200 w-full mb-2">
 
-                <div class="results h-96 w-96 overflow-scroll p-2 border bg-white"
-                     x-show="search != '' ">
+                <div class="results h-96 w-96 overflow-scroll p-2 border bg-white">
                     <div class="flex justify-center gap-4">
                         <div>
                             <h3 class="mb-1 text-xs font-bold">Outline</h3>
