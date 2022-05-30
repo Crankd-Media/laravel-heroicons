@@ -14,6 +14,8 @@ class LaravelHeroIconsServiceProvider extends ServiceProvider
 
     private const PATH_ASSETS = __DIR__ . '/../resources/js';
 
+    private const SVG_ASSETS = __DIR__ . '/../resources/svg';
+
     /**
      * Bootstrap services.
      *
@@ -33,6 +35,7 @@ class LaravelHeroIconsServiceProvider extends ServiceProvider
 
         $this->publishes([
             self::PATH_ASSETS => public_path('crankd/laravel-heroicons'),
+            self::SVG_ASSETS => public_path('crankd/laravel-heroicons'),
         ], 'heroicons-helper');
 
     }
