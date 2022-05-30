@@ -4,8 +4,11 @@ document.addEventListener("alpine:init", () => {
         search: "",
         icons: JSON.parse(initIcons),
         filteredIcons() {
+            if (this.search == "") {
+                return this.icons;
+            }
             return this.icons.filter((icon) =>
-                icon.toLowerCase().includes(this.search.toLowerCase())
+                icon.name.toLowerCase().includes(this.search.toLowerCase())
             );
         },
         copyIcon(icon, type) {
@@ -13,7 +16,7 @@ document.addEventListener("alpine:init", () => {
                 '<x-heroicon::icon type="' +
                 type +
                 '" icon="' +
-                icon +
+                icon.name +
                 '" class="w-6 h-6" />';
 
             navigator.clipboard.writeText(copyText).then(() => {

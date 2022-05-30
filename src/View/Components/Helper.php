@@ -2,7 +2,6 @@
 
 namespace Crankd\LaravelHeroIcons\View\Components;
 
-use Illuminate\Support\Facades\File;
 use Illuminate\View\Component;
 
 class Helper extends Component
@@ -51,8 +50,10 @@ class Helper extends Component
             $icon['name'] = $fileName;
             $icon['svg'] = $fileName . ".svg";
 
-            $path = __DIR__ . '/../../../resources/views/components/svg/o-academic-cap.svg';
-            $icon['svg_file'] = File::get($path);
+            // $path = __DIR__ . '/../../../resources/views/components/svg/o-academic-cap.svg';
+            // $icon['svg_file'] = File::get($path);
+
+            array_push($icons, $icon);
 
         }
         // return $icons;

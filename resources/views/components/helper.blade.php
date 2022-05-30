@@ -59,7 +59,9 @@ break;
                                 <template x-for="(icon, index) in filteredIcons">
                                     <div class="text-xs bg-white p-2 border border-gray-200 w-full"
                                          @click="copyIcon(icon,'outline')">
-                                        <span x-text="icon.name"></span>
+                                        <img :src="icon.svg_path +'o-'+ icon.svg"
+                                             :alt="icon.name"
+                                             class="w-6 h-6">
                                     </div>
                                 </template>
                             </div>
@@ -70,8 +72,10 @@ break;
                                 <template x-for="(icon, index) in filteredIcons">
                                     <div class="text-xs bg-white p-2 border border-gray-200 w-full"
                                          @click="copyIcon(icon, 'solid')">
-                                        <span x-text="icon.name">
-                                        </span>
+                                        <img :src="icon.svg_path +'s-'+ icon.svg"
+                                             :alt="icon.name"
+                                             class="w-6 h-6">
+
                                     </div>
                                 </template>
                             </div>
