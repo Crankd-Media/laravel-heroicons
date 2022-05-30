@@ -15,6 +15,8 @@ break;
 }
 @endphp
 
+{{ $icons }}
+
 <div class="fixed {{ $position  }} z-50 bg-white rounded"
      x-data="helper('{{ $icons  }}')">
 
@@ -57,7 +59,7 @@ break;
                                 <template x-for="(icon, index) in filteredIcons">
                                     <div class="text-xs bg-white p-2 border border-gray-200 w-full"
                                          @click="copyIcon(icon,'outline')">
-                                        <span x-text="icon"></span>
+                                        <span x-text="icon.name"></span>
                                     </div>
                                 </template>
                             </div>
@@ -68,7 +70,7 @@ break;
                                 <template x-for="(icon, index) in filteredIcons">
                                     <div class="text-xs bg-white p-2 border border-gray-200 w-full"
                                          @click="copyIcon(icon, 'solid')">
-                                        <span x-text="icon">
+                                        <span x-text="icon.name">
                                         </span>
                                     </div>
                                 </template>

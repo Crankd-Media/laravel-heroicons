@@ -44,7 +44,14 @@ class Helper extends Component
         $heroicons = array_diff(scandir($path), array('.', '..'));
         foreach ($heroicons as $key => $icon) {
             $fileName = str_replace('.blade.php', '', $icon);
-            array_push($icons, $fileName);
+            // $icon['balde'] = $fileName;
+
+            $icon = [];
+            $icon['name'] = $fileName;
+
+            $icon['svg'] = $fileName . "svg";
+
+            array_push($icons, $icon);
         }
         // return $icons;
         return json_encode($icons, JSON_UNESCAPED_SLASHES);
