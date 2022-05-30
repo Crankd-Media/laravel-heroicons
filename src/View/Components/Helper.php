@@ -49,7 +49,7 @@ class Helper extends Component
             $icon = [];
             $icon['name'] = $fileName;
             $icon['svg'] = $fileName . ".svg";
-            $icon['svg_path'] = 'crankd/laravel-heroicons/svg/';
+            $icon['svg_path'] = '/crankd/laravel-heroicons/svg/';
             array_push($icons, $icon);
 
         }
