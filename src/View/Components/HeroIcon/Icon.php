@@ -11,15 +11,18 @@ class Icon extends Component
 
     public $icon;
 
+    public $v;
+
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct($type = "outline", $icon = "x-circle")
+    public function __construct($type = "outline", $icon = "x-circle", $v = "")
     {
         $this->type = $type;
         $this->icon = $icon;
+        $this->v = $v;
     }
 
     /**
@@ -29,6 +32,11 @@ class Icon extends Component
      */
     public function render()
     {
-        return view('heroicons::components.heroicons.' . $this->type . '.' . $this->icon);
+
+        if ($this->v != '') {
+            return view('heroicons::components.heroicons.' . $this->v . '.' . $this->type . '.' . $this->icon);
+        } else {
+            return view('heroicons::components.heroicons.' . $this->type . '.' . $this->icon);
+        }
     }
 }
