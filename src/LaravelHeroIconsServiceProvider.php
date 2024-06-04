@@ -37,7 +37,6 @@ class LaravelHeroIconsServiceProvider extends ServiceProvider
             self::PATH_ASSETS => public_path('crankd/laravel-heroicons/js'),
             self::SVG_ASSETS => public_path('crankd/laravel-heroicons/svg'),
         ], 'heroicons-helper');
-
     }
 
     /**
@@ -62,5 +61,4 @@ class LaravelHeroIconsServiceProvider extends ServiceProvider
         Blade::componentNamespace('Crankd\\LaravelHeroIcons\\View\\Components\\HeroIcon', config('heroicons.prefix.heroicon'));
         return $this;
     }
-
 }
